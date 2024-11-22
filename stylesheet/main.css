@@ -1,0 +1,371 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #e7ca8f, #aeded2);
+}
+
+.card {
+    z-index: 20;
+    width: 400px;
+    height: 220px;
+    background: linear-gradient(to right, #9c5262, #6c324b);
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 1s;
+    /* transform-style: preserve-3d; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+    >.back {
+        position: absolute;
+        top: 50px;
+        transition: 1s;
+        opacity: 0;
+        height: 50px;
+        width: 100%;
+        /* background-color: yellow; */
+        background-color: black;
+    }
+
+    >.security {
+        position: absolute;
+        top: 110px;
+        transition: 1s;
+        width: 90%;
+        height: 30px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%);
+        opacity: 0;
+
+        >div {
+            display: flex;
+            align-items: center;
+            transform: scaleX(-1);
+            outline: none;
+            width: 100%;
+            background-color: white;
+            height: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid rgba(186, 165, 165, 0.4);
+        }
+    }
+
+    >.cardnumberpurple {
+        /* background-color: red; */
+        width: 320px;
+        height: 40px;
+        margin-top: 70px;
+        margin-left: 40px;
+        /* transition: 1s; */
+
+        >ul {
+            width: 100%;
+            height: 100%;
+            /* background-color: blue; */
+            display: flex;
+            justify-content: space-between;
+
+            >li {
+                font-family: primary;
+                height: 100%;
+                width: 20%;
+                /* background-color: yellow; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 38px;
+            }
+        }
+    }
+
+    >.cardholderpurple {
+        /* background-color: red; */
+        width: 240px;
+        height: 40px;
+        margin-top: 40px;
+        margin-left: 40px;
+        transition: 1s;
+
+        >span {
+            color: white;
+        }
+
+        >#holder {
+            color: white;
+            width: 100%;
+            height: 100%;
+            /* background-color: blue; */
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            /* font-size: 20px; */
+            /* font-family: primary; */
+            font-family: holder;
+        }
+    }
+
+    >.cardexpirespurple {
+        width: 70px;
+        height: 40px;
+        position: absolute;
+        right: 40px;
+        bottom: 30px;
+        transition: 1s;
+        /* background-color: yellow; */
+
+        >span {
+            color: white;
+        }
+
+        >#expires {
+            color: white;
+            width: 100%;
+            height: 100%;
+            /* background-color: blue; */
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            /* font-size: 20px; */
+            font-family: primary;
+            transition: 1s;
+
+            >span {
+                height: 100%;
+
+                &:first-of-type {
+                    /* background-color: red; */
+                    width: 20px;
+                }
+
+                &:last-of-type {
+                    /* background-color: blue; */
+                    width: 30px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        transform: perspective(850px) rotateY(180deg) translateX(200px);
+
+        >.back {
+            opacity: 1;
+        }
+
+        >.security {
+            opacity: 1;
+        }
+
+        >img {
+            opacity: 0;
+        }
+
+        >.cardnumberpurple {
+            opacity: 0;
+        }
+
+        >.cardholderpurple {
+            opacity: 0;
+        }
+
+        >.cardexpirespurple {
+            opacity: 0;
+        }
+    }
+
+    >img {
+        transition: 1s;
+        position: absolute;
+
+        &:first-of-type {
+            width: 40px;
+            left: 20px;
+            top: 10px;
+        }
+
+        &:last-of-type {
+            width: 60px;
+            right: 25px;
+            top: 20px;
+        }
+    }
+}
+
+.white {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 160px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+
+    >span {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.50);
+        text-transform: uppercase;
+
+        &:nth-of-type(1) {
+            position: absolute;
+            left: 15%;
+            top: 148px;
+        }
+
+        &:nth-of-type(2) {
+            position: absolute;
+            left: 15%;
+            top: 219px;
+        }
+
+        &:nth-of-type(3) {
+            position: absolute;
+            left: 15%;
+            top: 290px;
+        }
+
+        &:nth-of-type(4) {
+            position: absolute;
+            right: 25%;
+            top: 290px;
+        }
+    }
+
+    >.cardnumber {
+        width: 70%;
+        height: 30px;
+        /* background-color: yellow; */
+        position: absolute;
+        top: 170px;
+        display: flex;
+        justify-content: space-between;
+
+        >input {
+            padding-left: 10px;
+            width: 20%;
+            height: 100%;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            /* background-color: red; */
+        }
+    }
+
+    >.holder {
+        width: 70%;
+        height: 30px;
+        /* background-color: yellow; */
+        position: absolute;
+        bottom: 230px;
+        display: flex;
+        justify-content: space-between;
+
+        >input {
+            padding-left: 10px;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            /* background-color: red; */
+        }
+    }
+
+    >.datecvv2 {
+        width: 70%;
+        height: 30px;
+        /* background-color: yellow; */
+        position: absolute;
+        bottom: 160px;
+        display: flex;
+        justify-content: space-between;
+
+        >.date {
+            width: 50%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: space-between;
+
+            >input {
+                padding-left: 10px;
+                /* background-color: blue; */
+                width: 46%;
+                border-radius: 5px;
+                height: 100%;
+                /* overflow: hidden; */
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                outline: none;
+            }
+        }
+
+        >.cvv2 {
+            width: 25%;
+
+            /* background-color: blue; */
+            >input {
+                width: 100%;
+                padding-left: 10px;
+                height: 100%;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    >button {
+        color: white;
+        text-transform: uppercase;
+        width: 70%;
+        height: 40px;
+        background-color: rgb(28, 130, 170);
+        position: absolute;
+        border: none;
+        bottom: 80px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+footer {
+    >span {
+        font-family: primary;
+        position: absolute;
+        font-size: 30px;
+        bottom: 75px;
+        right: 20px;
+        color: black;
+    }
+
+    >div {
+        color: black;
+        /* background-color: yellow; */
+        position: absolute;
+        font-size: 30px;
+        bottom: 25px;
+        right: 20px;
+
+        >a {
+            /* background-color: yellow; */
+            color: black;
+        }
+    }
+}
+
+
+@font-face {
+    font-family: primary;
+    src: url(../fonts/GloriaHallelujah-Regular.ttf)
+}
+
+@font-face {
+    font-family: holder;
+    src: url(../fonts/Lacquer-Regular.ttf)
+}
