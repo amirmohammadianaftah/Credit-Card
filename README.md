@@ -1,6 +1,6 @@
 # Credit Card
 
- [Demo Project](https://amirmohammadianaftah.github.io/creditcard/)
+ [Demo Project](https://amirmohammadianaftah.github.io/Credit-Card/)
   - 
 - Developed by Amir Mohammadian
 - Created - 2024-11-20
